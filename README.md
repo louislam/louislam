@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 💡 Uptime Kuma maintainer 
+- 💡 [Uptime Kuma](https://github.com/louislam/uptime-kuma) maintainer 
 - 🐨 Just another developer in the world
 - ©️ Love C-like languages only
 - 😏 Love Zero-config
