@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 💡 A Uptime Kuma maintainer 
+- 💡 Uptime Kuma maintainer 
 - 🐨 Just another developer in the world
 - ©️ Love C-like languages only
 - 😏 Love Zero-config
