@@ -6,8 +6,6 @@
 - 😏 Love Zero-config
 - ✨ Simple is beautiful
 - 🦥 Write less, do more
-- ⚖️ 「性價比」
-
 
 <img src="https://github-readme-stats.vercel.app/api?username=louislam&count_private=true&show_icons=true&include_all_commits=true" /> 
 
