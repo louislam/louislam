@@ -15,4 +15,6 @@
 
 <img src="https://raw.githubusercontent.com/louislam/louislam/master/profile-3d-contrib/profile-green-animate.svg" />
 
+![](https://steam-stat.vercel.app/api?profileName=_Louis)
+
 [![My Last.fm](https://lastfm-recently-played.vercel.app/api?user=louislamlam)](https://www.last.fm/user/louislamlam)
