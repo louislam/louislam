@@ -5,7 +5,7 @@
 - [WhatsAdd](https://github.com/louislam/whatsadd) - Android App - Start conversations with any phone numbers on WhatsApp
 - [RDP Portal](https://github.com/louislam/rdp-portal) - Windows App - A portable RDP manager like WinSCP or HeidiSQL
 - [Lazy Compress H.265 (HEVC)](https://github.com/louislam/lazy-compress-h265) - Windows App - Right click and convert to H.265 video 
-- [More inactive or small projects](https://github.com/louislam?tab=repositories&q=&type=public)...
+- [More inactive or small projects]([https://github.com/louislam?tab=repositories&q=&type=public](https://github.com/louislam?tab=repositories&q=&type=public&language=&sort=stargazers))...
 
 ### Non-Open Source Projects
 
