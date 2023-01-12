@@ -20,11 +20,7 @@
 - ✨ Simple is beautiful
 - 🦥 Write less, do more
 
-
-
 <img src="https://github-readme-stats.vercel.app/api?username=louislam&count_private=true&show_icons=true&include_all_commits=true" /> 
-
-<img src="https://raw.githubusercontent.com/louislam/louislam/master/profile-3d-contrib/profile-green-animate.svg" />
 
 ![](https://steam-stat.vercel.app/api?profileName=_Louis)
 
