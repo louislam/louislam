@@ -19,9 +19,3 @@
 - 😏 Love Zero-config
 - ✨ Simple is beautiful
 - 🦥 Write less, do more
-
-<img src="https://github-readme-stats.vercel.app/api?username=louislam&count_private=true&show_icons=true&include_all_commits=true" /> 
-
-![](https://steam-stat.vercel.app/api?profileName=_Louis)
-
-[![My Last.fm](https://lastfm-recently-played.vercel.app/api?user=louislamlam)](https://www.last.fm/user/louislamlam)
