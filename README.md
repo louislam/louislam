@@ -10,7 +10,6 @@
 ### Non-Open Source Projects
 
 - [WhatSticker](https://whatsticker.online) - Web / Android App - A Stickers platform which supports WhatsApp, Telegram and Signal Stickers
-- [Fire Bookmark Widget](https://play.google.com/store/apps/details?id=net.louislam.firebookmarkwidget) - Android App - A widget for Firefox for Android
 
 ### 🐣🐨🐻🐻‍❄️?????
 
