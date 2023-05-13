@@ -7,10 +7,6 @@
 - [Lazy Compress H.265 (HEVC)](https://github.com/louislam/lazy-compress-h265) - Windows App - Right click and convert to H.265 video 
 - [More inactive or small projects](https://github.com/louislam?tab=repositories&q=&type=public&language=&sort=stargazers)...
 
-### Non-Open Source Projects
-
-- [WhatSticker](https://whatsticker.online) - Web / Android App - A Stickers platform which supports WhatsApp, Telegram and Signal Stickers
-
 ### 🐣🐨🐻🐻‍❄️?????
 
 - 🐨 Just another developer in the world
