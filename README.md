@@ -18,3 +18,9 @@
 - 😏 Love Zero-config
 - ✨ Simple is beautiful
 - 🦥 Write less, do more
+
+### Gist 
+
+https://gist.github.com/louislam
+
+Just found out recently that I can used it as a blog.
