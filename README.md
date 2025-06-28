@@ -9,7 +9,6 @@
 - [Dockge](https://github.com/louislam/dockge) - Web / Docker - A fancy, easy-to-use and reactive self-hosted docker compose.yaml stack-oriented manager
 - [RDP Portal](https://github.com/louislam/rdp-portal) - Windows App - A portable RDP manager like WinSCP or HeidiSQL
 - [AkaiGrid](https://github.com/louislam/akaigrid) - Windows App - A fancy frontend for browsing your video folders on Windows.
-- [Lazy Compress H.265 (HEVC)](https://github.com/louislam/lazy-compress-h265) - Windows App - Right click and convert to H.265 video 
 - [More inactive or small projects](https://github.com/louislam?tab=repositories&q=&type=public&language=&sort=stargazers)...
 
 ### 🐣🐨🐻🐻‍❄️?????
