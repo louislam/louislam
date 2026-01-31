@@ -1,6 +1,6 @@
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/louislam)
 
-<img src="https://github-readme-stats.vercel.app/api?username=louislam&show_icons=true&number_format=long&border_radius=20&rank_icon=percentile&ring_color=75C3FD&hide=issues" width=700 />
+<img src="https://ghstats.17lai.site/?username=louislam&show_icons=true&number_format=long&border_radius=20&rank_icon=percentile&ring_color=75C3FD&hide=issues" width=700 />
 
 
 ### My Open Source Projects
