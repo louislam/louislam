@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "download-stats-image": "deno run --allow-all download-stats-image.ts"
+  }
+}
