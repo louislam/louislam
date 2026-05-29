@@ -2,7 +2,7 @@
 
 <img src="stats.svg" width=700 />
 
-### World Ranking (Users category)
+### ⭐ GitHub Stars World Ranking (Users category)
 
 [<img src="ranking.svg" width=350 />](https://gitstar-ranking.com/users)
 
