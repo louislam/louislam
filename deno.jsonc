@@ -1,5 +1,7 @@
 {
+  "lock": false,
   "tasks": {
-    "download-stats-image": "deno run --allow-all download-stats-image.ts"
+    "download-stats-image": "deno run --allow-all download-stats-image.ts",
+    "create-ranking-image": "deno run --allow-all create-ranking-image.ts"
   }
 }

@@ -2,6 +2,9 @@
 
 <img src="stats.svg" width=700 />
 
+### World Personal Ranking
+
+[<img src="ranking.svg" width=350 />](https://gitstar-ranking.com/users)
 
 ### My Open Source Projects
 
