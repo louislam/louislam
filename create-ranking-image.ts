@@ -16,8 +16,9 @@ interface UserEntry {
 
 async function fetchHTML(url: string): Promise<string> {
     const res = await fetch(url);
-    if (!res.ok)
+    if (!res.ok) {
         throw new Error(`HTTP ${res.status} fetching ${url}`);
+    }
     return res.text();
 }
 
@@ -36,9 +37,7 @@ async function getUserRank(username: string): Promise<number> {
 }
 
 async function getRankingPage(page: number): Promise<UserEntry[]> {
-    const url = page <= 1
-            ? "https://gitstar-ranking.com/users"
-            : `https://gitstar-ranking.com/users?page=${page}`;
+    const url = page <= 1 ? "https://gitstar-ranking.com/users" : `https://gitstar-ranking.com/users?page=${page}`;
 
     const html = await fetchHTML(url);
     const doc = new DOMParser().parseFromString(html, "text/html")!;
@@ -46,8 +45,7 @@ async function getRankingPage(page: number): Promise<UserEntry[]> {
     const users: UserEntry[] = [];
 
     for (const item of doc.querySelectorAll("a.list-group-item.paginated_item")) {
-        const avatarUrl =
-            item.querySelector("img.avatar_image_big")?.getAttribute("src") ?? "";
+        const avatarUrl = item.querySelector("img.avatar_image_big")?.getAttribute("src") ?? "";
         const href = item.getAttribute("href") ?? "";
         const username = href.replace(/^\//, "");
 
@@ -55,8 +53,7 @@ async function getRankingPage(page: number): Promise<UserEntry[]> {
         const rankMatch = nameText.match(/(\d+)\./);
         const rank = rankMatch ? parseInt(rankMatch[1]) : 0;
 
-        const starsText =
-            item.querySelector("span.stargazers_count")?.textContent ?? "";
+        const starsText = item.querySelector("span.stargazers_count")?.textContent ?? "";
         const stars = parseInt(starsText.replace(/\D/g, "")) || 0;
 
         if (rank > 0 && username) {
@@ -94,7 +91,7 @@ function generateSvg(users: UserEntry[], targetUser: string): string {
         const cx = PAD + 12 + AVATAR_R;
         const cy = y + ROW_H / 2;
         clipDefs += `<clipPath id="av${i}"><circle cx="${cx}" cy="${cy}" r="${AVATAR_R}"/></clipPath>\n    `;
-        const avatarEl = `<image href="${user.avatarUrl}" x="${cx - AVATAR_R}" y="${cy - AVATAR_R}" width="${AVATAR_R * 2}" height="${AVATAR_R * 2}" clip-path="url(#av${i})"/>`
+        const avatarEl = `<image href="${user.avatarUrl}" x="${cx - AVATAR_R}" y="${cy - AVATAR_R}" width="${AVATAR_R * 2}" height="${AVATAR_R * 2}" clip-path="url(#av${i})"/>`;
         const textX = cx + AVATAR_R + 12;
         const starsText = "★ " + user.stars;
         rows += `
@@ -122,7 +119,7 @@ console.log(`Fetching ranking page ${page}...`);
 const allUsers = await getRankingPage(page);
 
 const targetIdx = allUsers.findIndex(
-    (u) => u.username.toLowerCase() === username.toLowerCase()
+    (u) => u.username.toLowerCase() === username.toLowerCase(),
 );
 if (targetIdx === -1) throw new Error(`${username} not found in parsed page`);
 

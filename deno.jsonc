@@ -1,7 +1,28 @@
 {
-  "lock": false,
-  "tasks": {
-    "download-stats-image": "deno run --allow-all download-stats-image.ts",
-    "create-ranking-image": "deno run --allow-all create-ranking-image.ts"
-  }
+    "lock": false,
+    "tasks": {
+        "download-stats-image": "deno run --allow-all download-stats-image.ts",
+        "create-ranking-image": "deno run --allow-all create-ranking-image.ts"
+    },
+
+    // Run `deno fmt` to format your code
+    "fmt": {
+        "indentWidth": 4,
+        "semiColons": true,
+        "singleQuote": false,
+        "lineWidth": 200
+    },
+
+    // Lint
+    "lint": {
+        "rules": {
+            "tags": ["recommended"],
+            "exclude": [
+                "prefer-const",
+                "no-process-global",
+                "require-await",
+                "no-unused-vars"
+            ]
+        }
+    }
 }
