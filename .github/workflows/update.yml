@@ -1,4 +1,4 @@
-name: Download Stats Image
+name: Update SVG
 
 on:
     schedule:
@@ -6,7 +6,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    download-stats-image:
+    update:
         runs-on: ubuntu-latest
         permissions:
             contents: write
@@ -22,6 +22,12 @@ jobs:
 
             - name: Download stats image
               run: deno task download-stats-image
+
+            - name: Create Ranking Image
+              run: deno task create-ranking-image
+
+            - name: deno fmt
+              run: deno fmt
 
             - name: Commit and push if stats.svg changed
               run: |
