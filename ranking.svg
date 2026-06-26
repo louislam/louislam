@@ -1,10 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="440" height="318" viewBox="0 0 440 318">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="440" height="318" viewBox="0 0 440 318">
     <defs>
-        <clipPath id="av0"><circle cx="44" cy="43" r="18" /></clipPath>
-        <clipPath id="av1"><circle cx="44" cy="101" r="18" /></clipPath>
-        <clipPath id="av2"><circle cx="44" cy="159" r="18" /></clipPath>
-        <clipPath id="av3"><circle cx="44" cy="217" r="18" /></clipPath>
-        <clipPath id="av4"><circle cx="44" cy="275" r="18" /></clipPath>
+        <clipPath id="av0">
+            <circle cx="44" cy="43" r="18" />
+        </clipPath>
+        <clipPath id="av1">
+            <circle cx="44" cy="101" r="18" />
+        </clipPath>
+        <clipPath id="av2">
+            <circle cx="44" cy="159" r="18" />
+        </clipPath>
+        <clipPath id="av3">
+            <circle cx="44" cy="217" r="18" />
+        </clipPath>
+        <clipPath id="av4">
+            <circle cx="44" cy="275" r="18" />
+        </clipPath>
     </defs>
     <rect width="440" height="318" rx="12" fill="#0d1117" />
 
