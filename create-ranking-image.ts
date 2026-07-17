@@ -22,6 +22,18 @@ async function fetchHTML(url: string): Promise<string> {
     return res.text();
 }
 
+async function fetchAvatarAsDataUri(url: string): Promise<string> {
+    const res = await fetch(url);
+    if (!res.ok) {
+        console.warn(`Failed to fetch avatar ${url}: ${res.status}`);
+        return "";
+    }
+    const contentType = res.headers.get("content-type") || "image/png";
+    const buffer = await res.arrayBuffer();
+    const base64 = btoa(String.fromCharCode(...new Uint8Array(buffer)));
+    return `data:${contentType};base64,${base64}`;
+}
+
 async function getUserRank(username: string): Promise<number> {
     const html = await fetchHTML(`https://gitstar-ranking.com/${username}`);
     const doc = new DOMParser().parseFromString(html, "text/html")!;
@@ -64,7 +76,7 @@ async function getRankingPage(page: number): Promise<UserEntry[]> {
     return users;
 }
 
-function generateSvg(users: UserEntry[], targetUser: string): string {
+function generateSvg(users: UserEntry[], targetUser: string, avatarDataUri: string): string {
     const W = 440;
     const ROW_H = 58;
     const PAD = 14;
@@ -91,12 +103,20 @@ function generateSvg(users: UserEntry[], targetUser: string): string {
         const cx = PAD + 12 + AVATAR_R;
         const cy = y + ROW_H / 2;
         clipDefs += `<clipPath id="av${i}"><circle cx="${cx}" cy="${cy}" r="${AVATAR_R}"/></clipPath>\n    `;
-        const avatarEl = `<image href="${user.avatarUrl}" x="${cx - AVATAR_R}" y="${cy - AVATAR_R}" width="${AVATAR_R * 2}" height="${AVATAR_R * 2}" clip-path="url(#av${i})"/>`;
         const textX = cx + AVATAR_R + 12;
         const starsText = "★ " + user.stars;
-        rows += `
+        if (isTarget && avatarDataUri) {
+            const avatarEl = `<image href="${avatarDataUri}" x="${cx - AVATAR_R}" y="${cy - AVATAR_R}" width="${AVATAR_R * 2}" height="${AVATAR_R * 2}" clip-path="url(#av${i})"/>`;
+            rows += `
   <rect x="${PAD}" y="${y + 3}" width="${W - PAD * 2}" height="${ROW_H - 6}" rx="8" fill="${rowBg}"/>
-  ${avatarEl}
+  ${avatarEl}`;
+        } else {
+            const avatarColor = isTarget ? "#1f6feb" : "#30363d";
+            rows += `
+  <rect x="${PAD}" y="${y + 3}" width="${W - PAD * 2}" height="${ROW_H - 6}" rx="8" fill="${rowBg}"/>
+  <circle cx="${cx}" cy="${cy}" r="${AVATAR_R}" fill="${avatarColor}" clip-path="url(#av${i})"/>`;
+        }
+        rows += `
   <text x="${textX}" y="${cy + 6}" font-size="15" fill="${textColor}" font-weight="${isTarget ? "700" : "400"}" font-family="'Segoe UI',system-ui,sans-serif">#${user.rank} ${user.username}</text>
   <text x="${W - PAD - 6}" y="${cy + 1}" font-size="13" fill="${starColor}" font-family="Segoe UI',system-ui,sans-serif" text-anchor="end" dominant-baseline="middle">${starsText}</text>`;
     }
@@ -128,7 +148,13 @@ const end = Math.min(allUsers.length, targetIdx + offsetRows + 1);
 const users = allUsers.slice(start, end);
 
 console.log(`Showing ranks ${users[0].rank}–${users[users.length - 1].rank}`);
-console.log("Fetching avatars...");
-const svg = generateSvg(users, username);
+console.log("Fetching avatar...");
+const targetUser = users.find((u) => u.username.toLowerCase() === username.toLowerCase());
+let avatarDataUri = "";
+if (targetUser?.avatarUrl) {
+    avatarDataUri = await fetchAvatarAsDataUri(targetUser.avatarUrl);
+    console.log("Avatar fetched successfully.");
+}
+const svg = generateSvg(users, username, avatarDataUri);
 Deno.writeTextFileSync("ranking.svg", svg);
 console.log("ranking.svg generated successfully!");
