@@ -8,7 +8,7 @@
     aria-labelledby="descId"
 >
     <title id="titleId">Louis Lam's GitHub Stats, Rank: A+</title>
-    <desc id="descId">Total Stars Earned: 118334, Total Commits in 2026 : 485, Total PRs: 538, Contributed to (last year): 3</desc>
+    <desc id="descId">Total Stars Earned: 118373, Total Commits in 2026 : 480, Total PRs: 540, Contributed to (last year): 3</desc>
     <style>
     .header {
         font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -82,7 +82,7 @@
             stroke-dashoffset: 251.32741228718345;
         }
         to {
-            stroke-dashoffset: 16.895805338618132;
+            stroke-dashoffset: 17.04717829227857;
         }
     }
 
@@ -144,7 +144,7 @@
           Top
         </text>
                 <text x="-5" y="12" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" data-testid="percentile-rank-value" class="rank-percentile-text">
-          6.7%
+          6.8%
         </text>
             </g>
         </g>
@@ -162,7 +162,7 @@
                         x="219.01"
                         y="12.5"
                         data-testid="stars"
-                    >118334</text>
+                    >118373</text>
                 </g>
             </g>
             <g transform="translate(0, 25)">
@@ -178,7 +178,7 @@
                         x="219.01"
                         y="12.5"
                         data-testid="commits"
-                    >485</text>
+                    >480</text>
                 </g>
             </g>
             <g transform="translate(0, 50)">
@@ -194,7 +194,7 @@
                         x="219.01"
                         y="12.5"
                         data-testid="prs"
-                    >538</text>
+                    >540</text>
                 </g>
             </g>
             <g transform="translate(0, 75)">
